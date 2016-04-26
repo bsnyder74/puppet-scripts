@@ -1,0 +1,6 @@
+function ppv {
+  for i in $(ls -1 *.pp 2> /dev/null); do
+    echo "Validating $i"
+    puppet parser validate $i
+    done
+}
